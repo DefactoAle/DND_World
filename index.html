@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>3D Model Viewer</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #000; }
-      model-viewer { width: 100vw; height: 100vh; }
-    </style>
-  </head>
-  <body>
-    <model-viewer 
-      src="world.glb" 
-      alt="A 3D model" 
-      auto-rotate 
-      camera-controls 
-      shadow-intensity="1" 
-      exposure="1"
-      ar 
-      ar-modes="webxr scene-viewer quick-look"
-      environment-image="neutral">
-    </model-viewer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D World Viewer</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      height: 100%;
+      width: 100%;
+    }
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <model-viewer
+    src="world.glb"
+    alt="A 3D model of a world"
+    camera-controls
+    auto-rotate
+    autoplay
+    exposure="1"
+    shadow-intensity="1"
+    environment-image="neutral"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+  >
+  </model-viewer>
+</body>
 </html>
