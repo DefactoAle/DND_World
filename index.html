@@ -2,38 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3D World Viewer</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <title>Draco GLB Viewer</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer@latest/dist/model-viewer.min.js"></script>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
       background-color: #000;
-      height: 100%;
-      width: 100%;
     }
     model-viewer {
       width: 100vw;
       height: 100vh;
-      display: block;
     }
   </style>
 </head>
 <body>
   <model-viewer
     src="world.glb"
-    alt="A 3D model of a world"
-    camera-controls
+    alt="A 3D model"
     auto-rotate
-    autoplay
-    exposure="1"
+    camera-controls
+    background-color="#000000"
     shadow-intensity="1"
-    environment-image="neutral"
-    ar
-    ar-modes="webxr scene-viewer quick-look"
-    draco-decoder-path="https://unpkg.com/@google/model-viewer@latest/dist/draco/"
-  >
+    exposure="1"
+    draco-decoder-path="https://unpkg.com/@google/model-viewer@latest/dist/draco/">
   </model-viewer>
 </body>
 </html>
